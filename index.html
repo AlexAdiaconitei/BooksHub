@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BookHub</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2/css/single/github/github.min.css"
+/>
+</head>
+<body>
+
+    <script type="module">
+        import {createApp} from 'https://unpkg.com/petite-vue?module';
+
+        function BooksContainer() {
+            return {
+                books: [],
+                async getBooks() {
+                    var self = this
+                    $.getJSON(`books.json`, function(data) {
+                      self.books = data.books
+                    });
+                }
+            }
+        }
+
+        function Book(props) {
+            return {
+                $template: '#book-component',
+                title: props.title,
+                author: props.author,
+                authorUrl: props.authorUrl,
+                category: props.category,
+                info: props.info,
+                url: props.url,
+                cover: props.cover,
+                tags: props.tags,
+            }
+        }
+
+        createApp({
+          BooksContainer,
+          Book,
+        }).mount()
+    </script>
+
+    <template id="book-component">
+      
+            <div class="card bm--card-equal-height">
+              <a :href=`${url}` target="_blank">
+                <div class="card-image">
+                  <figure class="image is-2by3">
+                    <img :src=`${cover}` :alt=`${title}`>
+                  </figure>
+                </div>
+              </a>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4">{{ title }}</p>
+                    <p class="subtitle is-6">{{ author }} <a v-if="authorUrl" target="_blank" :href=`${authorUrl}`><i class="fas fa-external-link-alt"></i></a></p>
+                    <span class="tag is-info is-normal">{{ category }}</span>
+                  </div>
+                </div>
+            
+                <div class="content">
+                  <p>{{ info }}</p>
+                </div>
+                <div class="card-footer">
+                  <div class="tags level">
+                    <span class="tag level-item has-text-centered" v-for="(tag) in tags">{{ tag }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+    </template>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#">
+            <strong>Book</strong><i>Hub</i>
+          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">
+              Home
+            </a>
+      
+            <a class="navbar-item">
+              About
+            </a>
+    
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-github" title=".is-github">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Fork it on GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="section">
+        <div class="container" v-scope="BooksContainer()" @mounted="getBooks">
+          <div class="columns">
+            <div class="column is-one-third" v-for="(book, i) in books" :key="i" 
+            v-scope="
+              Book(
+                {
+                  title: book.title,
+                  author: book.author,
+                  authorUrl: book.authorUrl,
+                  category: book.category,
+                  info: book.info,
+                  url: book.url,
+                  cover: book.cover,
+                  tags: book.tags,
+                }
+                )">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="js/bulma/dist/bulma.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.bm--card-equal-height {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+ }
+
+ .bm--card-equal-height .card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+ }
+
+ .bm--card-equal-height .card-footer {
+    margin-top: auto;
+ }
+
+ .bm--card-equal-height .card-footer .tags {
+    margin-bottom: auto;
+ }

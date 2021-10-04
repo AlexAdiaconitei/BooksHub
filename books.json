@@ -1,0 +1,27 @@
+{
+    "categories": [
+        "Algoritmia", "Ciberseguridad"
+    ],
+    "books": [
+        {
+            "title": "Cracking the Coding Interview 189 Programming Questions and Solutions",
+            "author": "Gayle Laakmann McDowell",
+            "authorUrl": "https://twitter.com/CaimanX5",
+            "category": "Algoritmia",
+            "info": "I am not a recruiter. I am a software engineer. And as such, I know what it's like to be asked to whip up brilliant algorithms on the spot and then write flawless code on a whiteboard. I've been through this as a candidate and as an interviewer.",
+            "url": "https://cin.ufpe.br/~fbma/Crack/Cracking%20the%20Coding%20Interview%20189%20Programming%20Questions%20and%20Solutions.pdf",
+            "cover": "img/cover_cracking_the_code_interview.jpg",
+            "tags": ["interview", "entrevista"]
+        },
+        {
+            "title": "Advanced API Security OAuth 2.0 And Beyond",
+            "author": "Prabath Siriwardena",
+            "authorUrl": "",
+            "category": "Ciberseguridad",
+            "info": "Prepare for the next wave of challenges in enterprise security. Learn to better protect, monitor, and manage your public and private APIs.",
+            "url": "https://drive.google.com/file/d/1FGDPD2qySsSNhptR3t3tmQtd2penmkmn/view?usp=sharing",
+            "cover": "img/cover_advanced_api_security_oauth_2-0_and_beyond.jpg",
+            "tags": ["api", "oauth"]
+        }
+    ]
+}
