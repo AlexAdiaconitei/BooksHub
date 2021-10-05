@@ -6,7 +6,7 @@
         {
             "title": "Cracking the Coding Interview 189 Programming Questions and Solutions",
             "author": "Gayle Laakmann McDowell",
-            "authorUrl": "https://twitter.com/CaimanX5",
+            "authorUrl": "",
             "category": "Algoritmia",
             "info": "I am not a recruiter. I am a software engineer. And as such, I know what it's like to be asked to whip up brilliant algorithms on the spot and then write flawless code on a whiteboard. I've been through this as a candidate and as an interviewer.",
             "url": "https://cin.ufpe.br/~fbma/Crack/Cracking%20the%20Coding%20Interview%20189%20Programming%20Questions%20and%20Solutions.pdf",
@@ -18,10 +18,20 @@
             "author": "Prabath Siriwardena",
             "authorUrl": "",
             "category": "Ciberseguridad",
-            "info": "Prepare for the next wave of challenges in enterprise security. Learn to better protect, monitor, and manage your public and private APIs.",
-            "url": "https://drive.google.com/file/d/1FGDPD2qySsSNhptR3t3tmQtd2penmkmn/view?usp=sharing",
+            "info": "OAuth 2.0 And Beyond",
+            "url": "https://mega.nz/file/GiB1XKSS#kodKRz_d8SbVj1XErc5NACmZbIy5rKHE6fTA_QdTnOU",
             "cover": "img/cover_advanced_api_security_oauth_2-0_and_beyond.jpg",
             "tags": ["api", "oauth"]
+        },
+        {
+            "title": "Firewalls Don’t Stop Dragons",
+            "author": "Carey Parker",
+            "authorUrl": "https://www.amazon.com/-/es/Carey-Parker/e/B00SRN0G06/ref=aufs_dp_fta_dsk",
+            "category": "Ciberseguridad",
+            "info": "A Step-by-Step Guide to Computer Security for Non-Techies",
+            "url": "https://mega.nz/file/emBzWKYI#5TbH3NVsqm_W7VKpJjSboBP-tQME8JCJGKtxBBg8V_8",
+            "cover": "https://images.springer.com/sgw/books/medium/9781484238523.jpg",
+            "tags": ["firewall"]
         }
     ]
 }
