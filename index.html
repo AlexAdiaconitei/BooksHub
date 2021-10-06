@@ -27,17 +27,23 @@
         }
 
         function Book(props) {
-            return {
-                $template: '#book-component',
-                title: props.title,
-                author: props.author,
-                authorUrl: props.authorUrl,
-                category: props.category,
-                info: props.info,
-                url: props.url,
-                cover: props.cover,
-                tags: props.tags,
-            }
+          var limitedInfo;
+          if (props.info.length > 125)
+            limitedInfo = props.info.substring(0,125)+"...";
+          else
+            limitedInfo = props.info;
+          return {
+              $template: '#book-component',
+              title: props.title,
+              author: props.author,
+              authorUrl: props.authorUrl,
+              category: props.category,
+              info: limitedInfo,
+              fullInfo: props.info,
+              url: props.url,
+              cover: props.cover,
+              tags: props.tags,
+          }
         }
 
         createApp({
@@ -61,17 +67,17 @@
                   <div class="media-content">
                     <p class="title is-4">{{ title }}</p>
                     <p class="subtitle is-6">{{ author }} <a v-if="authorUrl" target="_blank" :href=`${authorUrl}`><i class="fas fa-external-link-alt"></i></a></p>
-                    <span class="tag is-info is-normal">{{ category }}</span>
                   </div>
                 </div>
             
                 <div class="content">
                   <p>{{ info }}</p>
+                  <p v-if="fullInfo.length > 125" :data-tooltip=`${fullInfo}`>
+                    <i class="fas fa-info-circle"></i>
+                  </p>
                 </div>
                 <div class="card-footer">
-                  <div class="tags level">
-                    <span class="tag level-item has-text-centered" v-for="(tag) in tags">{{ tag }}</span>
-                  </div>
+                  <span class="tag is-info is-normal">{{ category }}</span>
                 </div>
               </div>
             </div>
@@ -120,21 +126,20 @@
 
       <div class="section">
         <div class="container" v-scope="BooksContainer()" @mounted="getBooks">
-          <div class="columns">
-            <div class="column is-one-third" v-for="(book, i) in books" :key="i" 
-            v-scope="
-              Book(
-                {
-                  title: book.title,
-                  author: book.author,
-                  authorUrl: book.authorUrl,
-                  category: book.category,
-                  info: book.info,
-                  url: book.url,
-                  cover: book.cover,
-                  tags: book.tags,
-                }
-                )">
+          <div class="columns is-multiline">
+            <div class="column is-one-third-desktop is-one-quarter-widescreen is-half-tablet" 
+              v-for="(book, i) in books" :key="i" 
+              v-scope="Book({
+                        title: book.title,
+                        author: book.author,
+                        authorUrl: book.authorUrl,
+                        category: book.category,
+                        info: book.info,
+                        url: book.url,
+                        cover: book.cover,
+                        tags: book.tags,
+                      })"
+              >
             </div>
           </div>
         </div>
