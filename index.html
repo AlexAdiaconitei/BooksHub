@@ -119,7 +119,7 @@
       </nav>
 
       <div class="section">
-        <div class="container" v-scope="BooksContainer()" @mounted="getBooks">
+        <div class="container" v-scope="BooksContainer()" @vue:mounted="getBooks">
           <div class="columns">
             <div class="column is-one-third" v-for="(book, i) in books" :key="i" 
             v-scope="
