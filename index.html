@@ -125,7 +125,7 @@
       </nav>
 
       <div class="section">
-        <div class="container" v-scope="BooksContainer()" @mounted="getBooks">
+        <div class="container" v-scope="BooksContainer()" @vue:mounted="getBooks">
           <div class="columns is-multiline">
             <div class="column is-one-third-desktop is-one-quarter-widescreen is-half-tablet" 
               v-for="(book, i) in books" :key="i" 
