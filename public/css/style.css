@@ -17,3 +17,25 @@
  .bm--card-equal-height .card-footer .tags {
     margin-bottom: auto;
  }
+
+ [data-tooltip]:before {            
+   position : absolute;
+   content : attr(data-tooltip);
+   opacity : 0;
+
+   /* customizable */
+   transition: all 0.15s ease;
+   padding: 10px;
+   color: #296fa8;
+   border-radius: 10px;
+   box-shadow: 2px 2px 1px silver;
+}
+
+[data-tooltip]:hover:before {        
+   opacity : 1;
+
+   /* customizable */
+   background: #eff5fb;;
+   margin-top: -100%;
+   margin-left: 20px;   
+}

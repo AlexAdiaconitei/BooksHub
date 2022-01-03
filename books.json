@@ -14,7 +14,7 @@
             "tags": ["interview", "entrevista"]
         },
         {
-            "title": "Advanced API Security OAuth 2.0 And Beyond",
+            "title": "Advanced API Security: OAuth 2.0 and Beyond",
             "author": "Prabath Siriwardena",
             "authorUrl": "",
             "category": "Ciberseguridad",
@@ -30,8 +30,28 @@
             "category": "Ciberseguridad",
             "info": "A Step-by-Step Guide to Computer Security for Non-Techies",
             "url": "https://mega.nz/file/emBzWKYI#5TbH3NVsqm_W7VKpJjSboBP-tQME8JCJGKtxBBg8V_8",
-            "cover": "https://images.springer.com/sgw/books/medium/9781484238523.jpg",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/61BulSKNL4L.jpg",
             "tags": ["firewall"]
+        },
+        {
+            "title": "Personal Cybersecurity",
+            "author": "Marvin Waschke",
+            "authorUrl": "https://www.amazon.com/-/es/Marvin-Waschke/e/B007EJG0SG/ref=ntt_dp_epwbk_0",
+            "category": "Ciberseguridad",
+            "info": "How to Avoid and Recover from Cybercrime",
+            "url": "https://mega.nz/file/D6pUAARZ#HluWwGOZO1rk0d87K1Zn0k6RQ2s8az4jL_2njwCFgAA",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/61g3nW7Yb9L.jpg",
+            "tags": ["cybercrime"]
+        },
+        {
+            "title": "Learn Android App Development",
+            "author": "Wallace Jackson",
+            "authorUrl": "https://www.amazon.com/-/es/Wallace-Jackson/e/B0069FV9JG/ref=ntt_dp_epwbk_0",
+            "category": "Android",
+            "info": "",
+            "url": "https://mega.nz/file/qy5wyIjQ#zMHBwAoSmPRRXUczIWlksFDY1Cqy3oz4qNDFne23ZN8",
+            "cover": "https://images-na.ssl-images-amazon.com/images/I/41TnF6IsIIL._SX404_BO1,204,203,200_.jpg",
+            "tags": ["android","development"]
         }
     ]
 }
